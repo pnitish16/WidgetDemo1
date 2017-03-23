@@ -50,5 +50,23 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:weightSum="1">
+
+    <com.widgetdemo.UsageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+        <com.widgetdemo.GaugeViewSemi
+            android:id="@+id/gaugeView3"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        </LinearLayout>
 
 </LinearLayout>
