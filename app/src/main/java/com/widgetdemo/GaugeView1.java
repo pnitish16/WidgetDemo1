@@ -71,16 +71,17 @@ public class GaugeView1 extends View {
 
         internalArcStrokeWidth = (float) (constantMeasure * internalArcStrokeWidthScale);
 
-        paddingInnerCircle = (float) (constantMeasure * paddingInnerCircleScale);
+//        paddingInnerCircle = (float) (constantMeasure * paddingInnerCircleScale);
 
+        paddingInnerCircle = 0;
         strokePointerLineWidth = (float) (constantMeasure * pointerLineStrokeWidthScale);
         int mainCircleStroke = (int) (mainCircleScale * constantMeasure / 60);
 
         final TextPaint textPaint = new TextPaint();
-        textPaint.setTextSize(40);
+        textPaint.setTextSize((int)((constantMeasure/3 )* 0.6));
         textPaint.setColor(Color.parseColor("#000000"));
         textPaint.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("50%",constantMeasure/2, constantMeasure/2, textPaint);
+        canvas.drawText("490",constantMeasure/2, constantMeasure/2, textPaint);
 
         // middle arcs START
         Paint paintInnerArc1 = new Paint();
