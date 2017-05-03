@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LineView">
+        <attr name="gaugewidth" format="float" />
+        <attr name="steps" format="integer" />
+        <attr name="stepwidth" format="integer" />
+    </declare-styleable>
+</resources>

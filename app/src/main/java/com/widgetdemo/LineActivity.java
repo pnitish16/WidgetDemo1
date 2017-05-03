@@ -17,6 +17,7 @@ public class LineActivity extends AppCompatActivity {
     private float sweepAngleSecondChart = 1;
     private float sweepAngleThirdChart = 1;
     private CircleView circleView;
+    private CircleView1 circleView1;
     private Handler handler;
 
     @Override
@@ -25,6 +26,8 @@ public class LineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_line);
 
         circleView = (CircleView) findViewById(R.id.circleView);
+        circleView1 = (CircleView1) findViewById(R.id.circleView1);
+
         sbGauge = (SeekBar) findViewById(R.id.sbGauge);
 //        ObjectAnimator animation = ObjectAnimator.ofInt (sbGauge, "progress", 0, 100); // see this max value coming back here, we animale towards that value
 //        animation.setDuration (5000); //in milliseconds
@@ -33,6 +36,7 @@ public class LineActivity extends AppCompatActivity {
 
         handler = new Handler();
 
+        //Initial 2 sec halt and then roatate with a degree of 2.7 degrees
         for (int j = 0; j < 1000; j++) {
             final int finalJ = j;
             handler.postDelayed(new Runnable() {
@@ -54,7 +58,6 @@ public class LineActivity extends AppCompatActivity {
                     }, 1 * (finalJ));
                 }
             },2000);
-
         }
 
 
@@ -69,6 +72,7 @@ public class LineActivity extends AppCompatActivity {
                         public void run() {
                             degree = 0;
                             circleView.setRotateDegree(rotateDegree);
+                            circleView1.setRotateDegree(rotateDegree);
 
                         }
                     });
