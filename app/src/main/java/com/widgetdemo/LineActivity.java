@@ -34,6 +34,8 @@ public class LineActivity extends AppCompatActivity {
 //        animation.setInterpolator (new DecelerateInterpolator());
 //        animation.start ();
 
+        //Handler for the progress
+
         handler = new Handler();
 
         //Initial 2 sec halt and then roatate with a degree of 2.7 degrees
